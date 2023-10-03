@@ -23,9 +23,9 @@ import { ref } from 'vue';
             </div>
         </div>
 
-        <section v-show="user.name" class="bg-gray-100 rounded-lg mt-5 px-4 p-2 h-[500px] overflow-y-auto">
+        <div v-show="user.name" class="bg-gray-100 rounded-lg mt-5 px-4 p-2 h-[500px] overflow-y-auto">
             <MessageLine v-for="message in messages" :user="user" :message="message" />
-        </section>
+        </div>
 
         <div class="mt-5" v-show="user.name">
             <form @submit.prevent="sendMessage">

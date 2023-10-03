@@ -1,5 +1,4 @@
 <script setup>
-import { ref } from 'vue';
 </script>
 
 <template>
@@ -30,20 +29,7 @@ import { ref } from 'vue';
 
 <script>
 export default {
-    data() {
-        return {
-            search: ref(''),
-            show: false
-        };
-    },
-
     methods: {
-        searchFocus() {
-            setTimeout(() => {
-                this.show = !this.show;
-            }, 300);
-        },
-
         getSelctedUser(user) {
             this.$emit('getSelctedUser', user);
         }
